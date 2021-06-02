@@ -3,12 +3,12 @@
 
 
 class Square:
-	"""Derives a square"""
-	def __init__(self, size):
-		"""initializes attributes
-		Args:
-		    size (int): value to initialize `size`
-		Note:
-		   ``Args`` section don't include `self` parameter.
-		"""
-		self.__size = size
+    """Derives a square"""
+    def __init__(self, size):
+        """initializes attributes
+        Args:
+            size (int): value to initialize `size`
+        Note:
+            ``Args`` section don't include `self` parameter.
+        """
+        self.__size = size
