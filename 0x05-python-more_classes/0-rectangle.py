@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """defines class Rectangle"""
 
-    
 class Rectangle:
     """Define the variable or attribute in the principal method"""
     def __init__(self, width=0, height=0):
@@ -37,9 +36,7 @@ class Rectangle:
             TypeError: if `value` isn't an integer
             ValueError: if `value` is less than 0
         """
-        if value is None:
-            raise TypeError("width must be an integer")
-        if (type(value) is not int and type(value) is not float):
+        if isinstance(value, int):
             raise TypeError("width must be an integer")
         if (value < 0):
             raise ValueError("width must be >= 0")
@@ -60,9 +57,8 @@ class Rectangle:
             TypeError: if `value` isn't an integer
             ValueError: if `value` is less than 0
         """
-        if value is None:
-            raise TypeError("width must be an integer")
-        if (type(value) is not int and type(value) is not float):
+
+        if isinstance(value, int):
             raise TypeError("height must be an integer")
         if (value < 0):
             raise ValueError("height must be >= 0")
