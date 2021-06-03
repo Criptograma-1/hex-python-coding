@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """defines class Rectangle"""
 
+
 class Rectangle:
     """Define the variable or attribute in the principal method"""
     def __init__(self, width=0, height=0):
