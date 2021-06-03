@@ -29,7 +29,7 @@ class Rectangle:
             TypeError: if `value` isn't an integer
             ValueError: if `value` is less than 0
         """
-        if (type(value) is not int):
+        if (type(value) is not int and type(value) is not float):
             raise TypeError("width must be an integer")
         if (value < 0):
             raise ValueError("width must be >= 0")
@@ -50,7 +50,7 @@ class Rectangle:
             TypeError: if `value` isn't an integer
             ValueError: if `value` is less than 0
         """
-        if (type(value) is not int):
+        if (type(value) is not int and type(value) is not float):
             raise TypeError("height must be an integer")
         if (value < 0):
             raise ValueError("height must be >= 0")
