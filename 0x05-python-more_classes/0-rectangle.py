@@ -11,7 +11,7 @@ class Rectangle:
         Note:
             ``Args`` section don't include `self` parameter
         """
-        if not isinstance(width, int):
+        if (type(value) is not int and type(value) is not float):
             raise TypeError("width must be an integer")
         if (width < 0):
             raise ValueError("width must be >= 0")
@@ -36,7 +36,7 @@ class Rectangle:
             TypeError: if `value` isn't an integer
             ValueError: if `value` is less than 0
         """
-        if isinstance(value, int):
+        if (type(value) is not int and type(value) is not float):
             raise TypeError("width must be an integer")
         if (value < 0):
             raise ValueError("width must be >= 0")
