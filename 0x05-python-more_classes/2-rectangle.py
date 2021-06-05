@@ -6,7 +6,7 @@ defines class Rectangle
 
 class Rectangle:
     """Define the variable or attribute in the principal method"""
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """The __ define the attribute in private instance"""
         self.__width = width
         self.__height = height
@@ -25,7 +25,7 @@ class Rectangle:
         if (type(value) is not int and type(value) is not float):
             raise TypeError("width must be an integer")
         """ValueError exception with the message width must be >= 0"""
-        if value < 0:
+        if (value < 0):
             raise ValueError("width must be >= 0")
         self.__width = value
         return value
@@ -52,7 +52,7 @@ class Rectangle:
     """Public instance method: def area"""
     def area(self):
         """returns the rectangle area"""
-        return self.__height *  self.__width
+        return self.__height * self.__width
 
     """Public instance method: def perimeter"""
     def perimeter(self):
