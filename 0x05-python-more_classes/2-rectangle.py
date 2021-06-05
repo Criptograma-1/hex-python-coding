@@ -25,7 +25,7 @@ class Rectangle:
         if (type(value) is not int and type(value) is not float):
             raise TypeError("width must be an integer")
         """ValueError exception with the message width must be >= 0"""
-        if (value < 0):
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
         return value
