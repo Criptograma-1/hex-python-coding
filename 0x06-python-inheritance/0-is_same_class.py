@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-defines class is_same_class
+Prototype is_same_class
 """
 
 
 def is_same_class(obj, a_class):
-    """returns true if the object is exactly an instance of the specified class"""
-    if (isinstance(obj, a_class)):
-        return true
-    else
-        return false
+    """checks if obj belongs to a_class class"""
+    if type(obj) is a_class:
+        """return true if obj is the same class of a_class, false otherwise"""
+        return True
+    return False
