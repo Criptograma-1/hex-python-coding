@@ -5,5 +5,5 @@ Defines class BaseGeometry
 
 
 class BaseGeometry:
-  """an empty class"""
-  pass
+    """an empty class"""
+    pass
