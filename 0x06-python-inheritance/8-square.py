@@ -6,7 +6,7 @@ Rectangle = __import__('7-ractangle').Rectangle
 """Defines class Square that inherits from Rectangle"""
 
 
-class Square:
+class Square(Rectangle):
     """Define the variable or attribute"""
     def __init__(self, size):
         """Validates the values with integer_validator"""
