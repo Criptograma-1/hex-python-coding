@@ -28,9 +28,8 @@ Defines class Rectangle that inherits from BaseGeometry
 class Rectangle(BaseGeometry):
     """Define the variable or attribute"""
     def __init__(self, width, height):
-        """The __ define the attribute in private instance"""
-        self.__width = width
-        self.__height = heigth
         """Validates the values with integer_validator"""
-        BaseGeometry.integer_validator(width)
-        BaseGeometry.integer_validator(height)
+        if self.integer_validator("width", width):
+            self.__width = width
+        if self.integer_validator("height", height):
+            self.__height = height
