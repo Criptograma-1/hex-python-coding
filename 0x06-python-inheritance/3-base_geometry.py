@@ -4,6 +4,6 @@ Defines class BaseGeometry
 """
 
 
-Class BaseGeometry:
+class BaseGeometry:
   """an empty class"""
   pass
