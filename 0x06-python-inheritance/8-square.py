@@ -7,11 +7,8 @@ Rectangle = __import__('7-ractangle').Rectangle
 
 
 class Square:
-    """Defines size"""
+    """Define the variable or attribute"""
     def __init__(self, size):
-        """`size` must be private
-           `size` must be a positive integer
-           `size` must be validated by integer_validator
-        """
+        """Validates the values with integer_validator"""
         self.integer_validator("size", size)
         self.__size = size
