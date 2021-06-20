@@ -9,4 +9,3 @@ class BaseGeometry:
     def area(self):
         """raises an Exception"""
         raise BaseGeometry
-        except area
