@@ -5,6 +5,7 @@ BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 """Defines class Rectangle that inherits from BaseGeometry"""
 
+
 class Rectangle(BaseGeometry):
     """Define the variable or attribute"""
     def __init__(self, width, height):
