@@ -5,7 +5,8 @@ Defines class BaseGeometry
 
 
 class BaseGeometry:
-    """an empty class"""
+    """Defines area"""
     def area(self):
         """raises an Exception"""
-        raise area
+        raise BaseGeometry
+        except area
