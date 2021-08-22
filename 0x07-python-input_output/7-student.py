@@ -24,5 +24,5 @@ class Student:
         """
         data = {}
         for attr in Student.__dict__:
-            data[attr] = obj.__dict__[attr]
+            data[attr] = Student.__dict__[attr]
         return data
