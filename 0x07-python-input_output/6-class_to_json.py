@@ -4,12 +4,14 @@
 
 def class_to_json(obj):
     """
-    Appends a string at the end of a text file and returns
-    the number of characters added.
+    returns the dictionary description with simple data structure
+    for JSON serialization of an object
     Args:
-        filename (str): Name of the file to be opened/created
-        text (str): Text that will be inserted into the file
+        obj: a class
     Returns:
-        Number of characters added into the file
+        converted class to dictionary
     """
-    return obj = obj.__dict__
+    data = {}
+    for attr in player.__dict__:
+        data[attr] = player.__dict__[attr]
+    return data
