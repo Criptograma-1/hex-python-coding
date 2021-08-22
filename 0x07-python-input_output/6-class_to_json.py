@@ -12,6 +12,6 @@ def class_to_json(obj):
         converted class to dictionary
     """
     data = {}
-    for attr in player.__dict__:
-        data[attr] = player.__dict__[attr]
+    for attr in obj.__dict__:
+        data[attr] = obj.__dict__[attr]
     return data
