@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """Defines the function"""
 
+
 def append_write(filename="", text=""):
     """
-    Appends a string at the end of a text file and returns the number of characters added.
+    Appends a string at the end of a text file and returns 
+    the number of characters added.
+
     Args:
         filename (str): Name of the file to be opened/created
         text (str): Text that will be inserted into the file
