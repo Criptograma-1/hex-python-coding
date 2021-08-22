@@ -13,16 +13,13 @@ class Student:
             last_name (string): student's last name
             age (int): student age
         """
-        self.__first_name = first_name
-        self.__last_name = last_name
-        self.__age = age
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
     def to_json(self):
         """retrieves a dictionary representation of a Student instance
         Returns:
             converted class to dictionary
         """
-        data = {}
-        for attr in Student.__dict__:
-            data[attr] = Student.__dict__[attr]
-        return data
+        return self.__dict__
