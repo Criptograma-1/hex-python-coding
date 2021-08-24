@@ -122,3 +122,10 @@ class Rectangle(Base):
         i, w, h = self.id, self.width, self.height
         x, y = self.x, self.y
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(i, x, y, w, h))
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        return {
+            'id': self.id, 'width': self.width, 'height': self.height,
+            'x': self.x, 'y': self.y
+        }
