@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Create class Base"""
 
+import json
+
 
 class Base:
     """A base class for handle id"""
@@ -18,7 +20,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) < 1:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
