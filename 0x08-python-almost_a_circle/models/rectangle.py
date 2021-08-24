@@ -7,22 +7,24 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Initialize attributes"""
+    """Definition of own methods and attributes"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor with private attributes and its validations"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
-        """Property to retrive value of `width`"""
+        """Getter for width"""
         return self.__width
 
     @width.setter
+        """Setter for width"""
     def width(self, value):
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
