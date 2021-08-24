@@ -41,7 +41,7 @@ class Base:
         if type(json_string) != str:
             raise TypeError("json_string must be a string")
         if json_string is None or json_string == "":
-            return "[]"
+            return "{}"
         loads = json.loads(json_string)
         for d in loads:
             if type(d) != dict:
