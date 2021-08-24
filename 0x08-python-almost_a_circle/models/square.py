@@ -28,3 +28,4 @@ class Square(Rectangle):
     def size(self, value):
         """setter for size"""
         super().width(self, value)
+        super().height(self, value)
