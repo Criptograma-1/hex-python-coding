@@ -18,37 +18,60 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter for width"""
+        """ Getter for width """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter for width"""
-        self.__width = value
+        """ Setter for width """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
-        """Property to retrive value of `width`"""
+        """ Getter for height """
         return self.__height
 
     @height.setter
     def height(self, value):
-        self.height = value
+        """ Setter for height """
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
-        """Property to retrive value of `width`"""
+        """ Getter for x """
         return self.__x
 
     @x.setter
     def x(self, value):
-        self.x = value
+        """ Setter for x """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
     @property
     def y(self):
-        """Property to retrive value of `width`"""
+        """ Getter for y """
         return self.__y
 
     @y.setter
     def y(self, value):
-        self.y = value
+        """ Setter for y """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
