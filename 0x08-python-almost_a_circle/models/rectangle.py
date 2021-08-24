@@ -43,6 +43,10 @@ class Rectangle(Base):
                 self.width = args[1]
             if len(args) == 1:
                 self.id = args[0]
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key) is True:
+                    setattr(self, key, value)
 
     @property
     def width(self):
