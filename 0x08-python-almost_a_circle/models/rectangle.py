@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 """Import class Base"""
 
 from models.base import Base
@@ -19,6 +19,30 @@ class Rectangle(Base):
     def area(self):
         """Return area of the rectangle"""
         return self.__width * self.__height
+
+    def update(self, *args):
+        """method that assigns an argument to each attibute"""
+        if args:
+            if len(args) == 5:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            if len(args) == 4:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+            if len(args) == 3:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+            if len(args) == 2:
+                self.id = args[0]
+                self.width = args[1]
+            if len(args) == 1:
+                self.id = args[0]
 
     @property
     def width(self):
