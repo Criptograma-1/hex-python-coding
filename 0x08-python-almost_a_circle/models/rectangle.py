@@ -20,7 +20,7 @@ class Rectangle(Base):
         """Return area of the rectangle"""
         return self.__width * self.__height
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """method that assigns an argument to each attibute"""
         if args:
             if len(args) == 5:
