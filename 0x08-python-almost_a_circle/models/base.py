@@ -2,6 +2,7 @@
 """Create class Base"""
 
 import json
+import os.path
 
 
 class Base:
@@ -51,3 +52,12 @@ class Base:
             obj = cls(1)
         obj.update(**dictionary)
         return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances from JSON file"""
+        if not os.path.exists(cls.__name__ + '.json'):
+            return []
+        with open(cls.__name__ + '.json', 'rt') as file:
+            objects = cls.from_json_string(file.read())
+        return [cls.create(**d) for d in objects]
