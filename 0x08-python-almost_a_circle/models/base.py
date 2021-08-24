@@ -34,3 +34,16 @@ class Base:
         list_objs = cls.to_json_string(list_objs)
         with open(cls.__name__ + '.json', 'wt') as file:
             file.write(list_objs)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string"""
+        if type(json_string) != str:
+            raise TypeError("json_string must be a string")
+        if json_string is None or json_string == "":
+            return []
+        loads = json.loads(json_string)
+        for d in loads:
+            if type(d) != dict:
+                raise ValueError("json_string must contain dictionaries")
+        return loads
