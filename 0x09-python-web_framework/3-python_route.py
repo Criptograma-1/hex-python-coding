@@ -20,7 +20,7 @@ def HBNB():
 def C(text):
     return ("C " + text.replace("_", " "))
 
-
+@app.route('/python/')
 @app.route('/python/<text>')
 def python(text = "is cool"):
     return ("Python " + text.replace("_", " "))
