@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that adds the State object 'Louisiana' to the database hbtn_0e_6_usa
+script that adds the State object 'Louisiana'
+to the database hbtn_0e_6_usa
 """
 
 from sqlalchemy import create_engine
@@ -15,7 +16,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_cities = session.query(State, City).filter(State.id == City.state_id)\
+    states_cities = session.query(State, City)\
+        .filter(State.id == City.state_id)\
         .order_by(City.id)
 
     for state, city in states_cities:
